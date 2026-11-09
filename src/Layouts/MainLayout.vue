@@ -7,6 +7,7 @@ import { House, LibraryBig, Heart } from '@lucide/vue';
 const route = useRoute();
 const isSidebarCollapsed = ref(true);
 const showlabels = ref(false);
+const appIconUrl = `${import.meta.env.BASE_URL}appicon.svg`;
 
 provide('sidebarCollapsed', isSidebarCollapsed);
 </script>
@@ -28,7 +29,7 @@ provide('sidebarCollapsed', isSidebarCollapsed);
                 </div>
             </div>
 
-            <img src="/appicon.svg" alt="Checkpoint Logo" class="h-10 w-10 shrink-0 sm:h-16 sm:w-16">
+            <img :src="appIconUrl" alt="Checkpoint Logo" class="h-10 w-10 shrink-0 sm:h-16 sm:w-16">
         </header>
 
         <hr class="mb-4 border-2 border-[#216bb5]">
